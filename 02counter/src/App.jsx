@@ -6,7 +6,10 @@ function App() {
 
   const addValue = () => {
     if (counter === 20) alert("no more INCREMENT!");
-    else setCounter(counter + 1);
+    else {
+      setCounter(counter + 1);
+      // setCounter((prevCounter) => prevCounter + 1); // NOTE: initially we were not holding the previous value that's why we are not getting the desired answer, callback is saviour for such situations.
+    }
   };
 
   return (
