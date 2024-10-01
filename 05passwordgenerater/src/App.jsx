@@ -19,6 +19,11 @@ function App() {
     setPassword(pass);
   };
 
+  const copyPass = () => {
+    navigator.clipboard.writeText(password)
+    alert("Password Copied✅✅")
+  }
+
   useEffect(() => {
     passwordGenrator();
   }, [length, numAllowed, charAllowed]);
@@ -34,7 +39,10 @@ function App() {
               className="w-full px-4 py-2 text-orange-400 bg-gray-900 border border-gray-600 rounded focus:outline-none"
               readOnly
             />
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded">
+            <button
+              className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded"
+              onClick={copyPass}
+            >
               Copy
             </button>
           </div>
