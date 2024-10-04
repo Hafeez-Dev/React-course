@@ -7,7 +7,7 @@ function Form() {
     <div
       className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
       style={{
-        backgroundImage: `url('https://images.pexels.com/photos/3532540/pexels-photo-3532540.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')`,
+        backgroundImage: `url('https://static.vecteezy.com/system/resources/previews/010/067/576/non_2x/monopoly-money-background-free-vector.jpg')`,
       }}
     >
       <div className="w-full">
