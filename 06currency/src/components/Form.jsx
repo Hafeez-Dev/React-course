@@ -58,12 +58,12 @@ function Form() {
             </div>
             <div className="w-full mt-1 mb-4">
               <InputBox
-               label="To"
-               amount={convertedAmount}
-               currencyOptions={options}
-               selectCurrency={to}
-               onCurrencyChange={(currency) => setTo(currency)}
-               amountDisable
+                label="To"
+                amount={convertedAmount}
+                currencyOptions={options}
+                selectCurrency={to}
+                onCurrencyChange={(currency) => setTo(currency)}
+                amountDisable
               />
             </div>
             <button
