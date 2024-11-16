@@ -11,6 +11,10 @@ function App() {
     setTodos((prevTodos) => [{ id, ...todo }, ...prevTodos]);
   };
 
+  const updateTodo = (todo, id) => {};
+  const deleteTodo = (id) => {};
+  const toggleComplete = (id) => {};
+
   return (
     <TodoProvider
       value={{ todos, addTodo, deleteTodo, toggleComplete, updateTodo }}
