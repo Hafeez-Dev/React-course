@@ -11,9 +11,25 @@ function App() {
     setTodos((prevTodos) => [{ id, ...todo }, ...prevTodos]);
   };
 
-  const updateTodo = (todo, id) => {};
-  const deleteTodo = (id) => {};
-  const toggleComplete = (id) => {};
+  const updateTodo = (todo, id) => {
+    setTodos((prev) =>
+      prev.map((prevTodos) => (prevTodos.id === id ? todo : prevTodos))
+    );
+  };
+
+  const deleteTodo = (id) => {
+    setTodos((prev) => prev.filter((prevTodos) => prevTodos.id !== id));
+  };
+
+  const toggleComplete = (id) => {
+    setTodos((prev) =>
+      prev.map((prevTodos) =>
+        prevTodos.id === id
+          ? { ...prevTodos, completed: !prevTodos.completed }
+          : prevTodos
+      )
+    );
+  };
 
   return (
     <TodoProvider
