@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TodoForm from "./components/TodoForm";
 import TodoItem from "./components/TodoItem";
 import { TodoProvider } from "./contexts/TodoContext";
@@ -55,7 +55,11 @@ function App() {
             <TodoForm />
           </div>
           <div className="flex flex-wrap gap-y-3">
-            <TodoItem />
+            {todos.map((todo) => (
+              <div key={todo.id} className="w-full">
+                <TodoItem todo={todo} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
