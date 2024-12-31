@@ -18,7 +18,7 @@ function App() {
       }).finally(() => {
         setLoading(false)
       })
-  }, [dispatch])
+  }, [])
 
   return !loading ? (
     <div className='flex justify-center items-center h-screen'>
