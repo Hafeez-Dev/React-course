@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { login, logout } from './store/authSlice'
 import { useDispatch } from 'react-redux'
 import authService from './appwrite/auth'
+import {Header, Footer} from './components' 
+import { Outlet } from 'react-router-dom'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -22,7 +24,11 @@ function App() {
 
   return !loading ? (
     <div className='flex justify-center items-center h-screen'>
-      <h1>Final Mega Blogs Poroject</h1>
+      <Header />
+        <main>
+          <Outlet />
+        </main>
+      <Footer />
     </div>
   ) : ("Loading...")
 }
