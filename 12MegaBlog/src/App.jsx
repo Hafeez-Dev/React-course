@@ -23,7 +23,7 @@ function App() {
   }, [])
 
   return !loading ? (
-    <div className='flex justify-center items-center h-screen'>
+    <div>
       <Header />
         <main>
           <Outlet />
