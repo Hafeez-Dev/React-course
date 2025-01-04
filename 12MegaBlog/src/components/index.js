@@ -1,7 +1,11 @@
 import Header from './Header/Header'
 import Footer from './Footer/Footer'
+import Button from './Button'
+import LogoutBtn from './Header/LogoutBtn'
 
 export {
     Header,
-    Footer
+    Footer,
+    Button,
+    LogoutBtn
 }
