@@ -4,6 +4,7 @@ import Button from './Button'
 import LogoutBtn from './Header/LogoutBtn'
 import Input from './Input'
 import Select from './Select'
+import PostCard from './PostCard'
 
 export {
     Header,
@@ -12,4 +13,5 @@ export {
     LogoutBtn,
     Input,
     Select,
+    PostCard,
 }
