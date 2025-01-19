@@ -4,7 +4,7 @@ import { Button, Input } from "./index";
 import { Link, useNavigate } from "react-router-dom";
 import { login as loginAction } from "../store/authSlice";
 import { useDispatch } from "react-redux";
-import { set, useForm } from "react-hook-form";
+import { useForm } from "react-hook-form";
 
 function Login() {
   const { register, handleSubmit } = useForm();
