@@ -47,14 +47,26 @@ function Login() {
                     <Input
                       label="Email Adress"
                       type="email"
-                      {...register("email")}
+                      {...register("email", {
+                        required: true,
+                        validate: {
+                          matchPattrn: (value) =>
+                            /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(
+                              value
+                            ) || "Email address must be a valid address",
+                        },
+                      })}
                     />
                   </div>
                   <div className="relative">
                     <Input
                       label="Password"
                       type="password"
-                      {...register("password")}
+                      {...register("password", {
+                        required: true,
+                        minLength: 6,
+                        maxLength: 20,
+                      })}
                     />
                   </div>
                   <div className="relative">
